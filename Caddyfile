@@ -1,0 +1,18 @@
+:2015 {
+    tracing {
+		span forwardproxy
+	}
+
+	log forwardproxy {
+		output stderr
+		format json
+	}
+
+	route {
+		forward_proxy {
+			acl {
+				allow all
+			}
+		}
+	}
+}
